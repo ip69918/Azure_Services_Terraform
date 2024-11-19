@@ -1,5 +1,5 @@
 resource "azurerm_log_analytics_workspace" "example" {
-  name                = "jelly-log-analytics"
+  name                = "user-log-analytics1"
   location            = azurerm_resource_group.example_rg.location
   resource_group_name = azurerm_resource_group.example_rg.name
   sku                 = "PerGB2018"
@@ -7,7 +7,7 @@ resource "azurerm_log_analytics_workspace" "example" {
 }
 
 resource "azurerm_container_app_environment" "example" {
-  name                       = "jelly-app-environment"
+  name                       = "user-app-environment1"
   location                   = azurerm_resource_group.example_rg.location
   resource_group_name        = azurerm_resource_group.example_rg.name
   log_analytics_workspace_id = azurerm_log_analytics_workspace.example.id
