@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "example_storage_account" {
 }
 
 resource "azurerm_storage_container" "example_container" {
-  name                  = "ishanbloobstorage"
+  name                  = "userbloobstorage1"
   storage_account_id    = azurerm_storage_account.example_storage_account.id 
   container_access_type = "private"
 
